@@ -350,120 +350,7 @@ class miPrint
 			}
 		}
 	}
-
-	public static function traerColorPorCentroAlmacen($centroalmacen)
-	{
-
-
-		$tmpColorTexot =  array(
-			"SA01-7003" => ["Administración", "DE6B48"],
-			"SA01-7010" => ["Depósito Central", "E5B181"],
-			"SA02-9012" => ["Santa Clara Quil", "F4B9B2"],
-			"SA02-9022" => ["Santa Clara Vare", "DAEDBD"],
-			"SA03-0030" => ["Sec Avellaneda", "7DBBC3"],
-			"SA03-9032" => ["Policli Reg Ave", "BA1200"],
-			"SA04-0040" => ["Sec Bahia Blanca", "031927"],
-			"SA04-0080" => ["Sec Campana", "9DD1F1"],
-			"SA04-0110" => ["Sec Lujan", "508AA8"],
-			"SA04-0270" => ["Sec Chivilcoy", "C8E0F4"],
-			"SA04-0420" => ["Sec Junin", "FAFAFA"],
-			"SA04-0470" => ["Sec Mar del Plat", "DB5461"],
-			"SA04-0510" => ["Sec Mercedes", "721817"],
-			"SA04-0530" => ["Sec Moron", "FA9F42"],
-			"SA04-0550" => ["Sec 9 de Julio", "2B4162"],
-			"SA04-0600" => ["Sec Pergamino", "0B6E4F"],
-			"SA04-0820" => ["Sec San Miguel", "E0E0E2"],
-			"SA04-0920" => ["Sec Tandil", "3F403F"],
-			"SA04-0940" => ["Sec Trenque Lauq", "475841"],
-			"SA04-0970" => ["Sec Vicent Lopez", "81C14B"],
-			"SA04-1310" => ["Sec Bragado", "ECBA82"],
-			"SA04-1460" => ["Sec 3 de Feb", "FBB02D"],
-			"SA04-8011" => ["Poli Ciudadela", "5C8001"],
-			"SA04-8021" => ["Poli Merlo", "7CB518"],
-			"SA04-8031" => ["Policon San Mig", "F3DE2C"],
-			"SA04-8041" => ["Policon Grand Bo", "FB6107"],
-			"SA04-8051" => ["Policon Vice Lop", "3F88C5"],
-			"SA04-8061" => ["Policon Caseros", "A2AEBB"],
-			"SA04-8072" => ["Cli Evita de Hae", "FFBA08"],
-			"SA04-8081" => ["Poli Villa Rosa", "D00000"],
-			"SA04-9042" => ["Policli Vandor", "1C3144"],
-			"SA04-9052" => ["San Carlos Miner", "DD403A"],
-			"SA05-0800" => ["Sec San Martin", "3E363F"],
-			"SA05-9062" => ["San San Martin", "FFFCE8"],
-			"SA06-7003" => ["General", "697A21"],
-			"SA07-7003" => ["General", "B8B42D"],
-			"SA08-9072" => ["Cli SC Mendoza", "8DDBE0"],
-			"SA09-0090" => ["Sec Cañada de Go", "D3FFE9"],
-			"SA09-0650" => ["Sec Rafaela", "9BC4BC"],
-			"SA09-0720" => ["Sec Rosario", "697A21"],
-			"SA09-0770" => ["Sec El Trebol", "090909"],
-			"SA09-0800" => ["Sec Firmat", "ACBED8"],
-			"SA09-0960" => ["Sec Venado Tuert", "E8EBF7"],
-			"SA09-1810" => ["Sec Las Parejas", "9BC4BC"],
-			"SA09-8121" => ["Poli Venado Tuer", "697A21"],
-			"SA09-9082" => ["San Rosendo Garc", "DE1A1A"],
-			"SA10-0500" => ["Sec Mendoza", "EF5B5B"],
-			"SA10-0520" => ["Sec Villa Merced", "20A39E"],
-			"SA10-0790" => ["Sec San Luis", "9BC4BC"],
-			"SA10-0850" => ["Sec San Rafael", "697A21"],
-			"SA10-8091" => ["Poli Mendoza", "FFBA49"],
-			"SA10-9112" => ["Cli Santa Clara", "EF5B5B"],
-			"SA11-0490" => ["Sec Matanza", "747274"],
-			"SA11-8101" => ["Poli Isidro Casa", "9BC4BC"],
-			"SA11-9122" => ["Policli Regi Eva", "7C90A0"],
-			"SA11-9132" => ["Cli S Clara Just", "4E5166"],
-			"SA11-9192" => ["Sta Clara Ramos", "EF5B5B"],
-			"SA12-0780" => ["Sec San Juan", "6F584B"],
-			"SA12-9142" => ["Cli S Clara Juan", "9BC4BC"],
-			"SA13-9152" => ["Cli S C Don Torc", "48ACF0"],
-			"SA14-7003" => ["General", "343F3E"],
-			"SA15-9162" => ["Soc Esp S M Mend", "255C99"],
-			"SA16-9172" => ["San Ramón Cereij", "9BC4BC"],
-			"SA17-7003" => ["Deposito Serca", "262626"],
-			"SA17-A087" => ["GEI 087 A2-26", "B3001B"],
-			"SA17-A088" => ["GEI 088 P-24", "36C9C6"],
-			"SA17-A620" => ["IEU 620 A3-30", "E6EBE0"],
-			"SA17-A631" => ["HIX 631 T-14", "9BC4BC"],
-			"SA17-A675" => ["KOW 675 A4-32", "F4F1BB"],
-			"SA17-A996" => ["OPZ 996 A1-34", "ED6A5A"],
-			"SA18-0100" => ["Sec Capital", "6E675F"],
-			"SA18-0450" => ["Sec Bell Ville", "EDEBD7"],
-			"SA18-0680" => ["Sec Rio Cuarto", "9BC4BC"],
-			"SA18-0760" => ["Sec San Francisc", "E3B23C"],
-			"SA18-0830" => ["Sec Tucuman", "423E37"],
-			"SA18-1010" => ["Sec Villa Maria", "FE5F00"],
-			"SA18-1690" => ["Sec La Rioja", "FF9B71"],
-			"SA18-2000" => ["Sec Catamarca", "FFFD82"],
-			"SA18-7003" => ["Policlinico Cent", "2D3047"],
-			"SA18-7011" => ["Depósito Central", "ED217C"],
-			"SA18-8111" => ["Policon Tucuman", "1B998B"],
-			"SA18-9192" => ["Clinica Rucci", "8F2D56"],
-			"SA19-7003" => ["General", "D81159"],
-			"SA20-7003" => ["Prepaga Central", "FFBC42"],
-			"SA21-7003" => ["General", "0496FF"],
-			"SA22-7003" => ["General", "006BA6"],
-			"SA23-0130" => ["Sec Casilda", "111D4A"],
-			"SA23-9100" => ["Sec Rafaela", "8380B6"],
-			"SA23-9910" => ["San Julian Moren", "C2CAE8"]
-		);
-
-		return $tmpColorTexot[$centroalmacen];
-	}
-
-	public static function traerColorPorFinanciador($financiador)
-	{
-
-		$tmpColor =  array(
-
-			"BASA" => "#445E93",
-			"O. SOCIAL" => "#7EB2DD",
-			"OTROS" => "#F93943",
-			"PAMI" => "#FCB0B3",
-			"UOM" => "#FCECC9"
-
-		);
-		return $tmpColor[$financiador];
-	}
+	
 
 	public static function escribirArchivoTemporal($nombre)
 	{
@@ -607,7 +494,7 @@ class miPrint
 		return $table;
 	}
 
-	public static function queryMysqlDesdeEnv($sql,$servername,$username, $password, $dbname )
+	public static function queryMysql($sql,$servername,$username, $password, $dbname )
 	{		
 		$conn = new \mysqli($servername, $username, $password, $dbname);		
 		if ($conn->connect_error) {
@@ -623,5 +510,15 @@ class miPrint
 		}
 		$conn->close();
 		return $resulados;
+	}
+	public static function queryExecMysql($sql,$servername,$username, $password, $dbname )
+	{		
+		$conn = new \mysqli($servername, $username, $password, $dbname);		
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}		
+		$result = $conn->query($sql);
+		
+		return $result;
 	}
 }
